@@ -61,6 +61,6 @@ Hash table has the following functions
 ## Team Members:
  
 
- - Waleed Muhammad Sohail (18B-123-SE-A) (Team Lead)
+ - Waleed Muhammad Sohail (18B-123-SE-A) 					(Team Lead)
  - Ahmad Zaman Qureshi (18B-045-SE-A)
  - Shazaib Awaan (18B-134-SE-A)
