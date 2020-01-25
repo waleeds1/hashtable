@@ -48,7 +48,7 @@ Hash table has the following functions
 
  - marks.py uses the hashtable to store quiz marks against roll numbers
  - openaddressing.py shows open addressing implemented.
- - rehashing.py demonstrates the rehashing being.
+ - rehashing.py demonstrates the rehashing being done.
 
 	
 
