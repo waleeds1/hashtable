@@ -9,10 +9,10 @@ Hash table has the following functions
 	Operations that the table's functionality is based upon.
 	 - #### Hash Function:
 		 Hash function gets key, value, and function as arguments and returns an index using the key. The function argument can be either search or insert and performs operation based on the required function. The hash function is implemented using division method and uses double hashing for collision handling.
-	- #### Rehash:
-		It increases or decreases the size of the array and using the hash function, inserts the elements of the previous array into the new resized array. This is done to maintain efficiency.
 	- #### LF:
 		It calculates the load factor which is the ratio of the total elements stored in the list to the size of the list.
+	- #### Rehash:
+		It increases the size of the array when the load factor is greater than 0.75, to maintain efficiency. When the load factor reaches 0.1 or lower, it reduces the size of the array to optimize space usage. After resizing, the elements from the older array are inserted into the resized array by re applying the hash function.
  - ### User accessible functions:
 	Functions the helps the user use the hash table
 	- #### Insert:
@@ -27,12 +27,30 @@ Hash table has the following functions
 		It prints the array where used by the hash table which contains all the elements. This helps to inspect the indexes the data is stored and also to check for rehashing by inspecting the size of the array.
 	
 ##  How To Use:
- - Create an object of the **HashTable** class and give the initial size of the table as an argument. The hash table will later be resized automatically when needed.
+ - Create a file in the folder where the HashTable.py is or place the HashTable.py in the folder in which the file that will use the hash table is.
+ - Import hash table in that file. 
+ `import HashTable`
+ - Create object of the hashtable by using the code below
+	  `ob1=HashTable.HashTable(m)`
+	  where m is the initial size of the table. The initial size **should not be less than 8**
+
  - To insert data into the table call the **Insert** function through the object giving a key as the first argument and data as the second argument.
- - To search for data stored against a key, call the **Search** function through the object, giving the key as the argument. If the key is not found it returns *False*
- - To delete an element , call the **Delete** function through the object, giving the key as the argument. If the key is not found it returns *False*
+ `ob1.Insert(key,data)`
+ - To search for data stored against a key, call the **Search** function through the object, giving the key as the argument. If the key is not found it returns *False*.
+ `ob1.Search(key)`
+ - To delete an element , call the **Delete** function through the object, giving the key as the argument. If the key is not found it returns *False*.
+ `ob1.Delete(key)`
  - Call the **PrintTable** function to print all the elements stored in the table.
+ `ob1.PrintTable`
  - Call the **PrintArray** function to print the array used by the hash table where all the elements are stored. There is *None* at indexes where no element is stored.
+ `ob1.PrintArray`
+## Examples:
+
+ - marks.py uses the hashtable to store quiz marks against roll numbers
+ - openaddressing.py shows open addressing implemented.
+ - rehashing.py demonstrates the rehashing being.
+
+	
 
 ##  Features:
 
@@ -44,5 +62,5 @@ Hash table has the following functions
  
 
  - Waleed Muhammad Sohail (18B-123-SE-A) (Team Lead)
- - Ahmad Zaman Qureshi (18B-025-SE-A)
+ - Ahmad Zaman Qureshi (18B-045-SE-A)
  - Shazaib Awaan (18B-134-SE-A)
