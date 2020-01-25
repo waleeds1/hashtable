@@ -30,7 +30,7 @@ Hash table has the following functions
  - Create a file in the folder where the HashTable.py is or place the HashTable.py in the folder in which the file that will use the hash table is.
  - Import hash table in that file. 
  `import HashTable`
- - Create object of the hashtable by using the code below
+ - Create object of the hashtable by using the code
 	  `ob1=HashTable.HashTable(m)`
 	  where m is the initial size of the table. The initial size **should not be less than 8**
 
