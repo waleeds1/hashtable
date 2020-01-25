@@ -1,11 +1,12 @@
 ## Hash Table
-Hash table 
+Hash Table is a data structure that stores data against a key in an
+associative manner. It uses a Hash function to generate an index based on the key where data can be inserted or searched and deleted from. It offers θ(1) average case complexity for insertion, deletion and searching.
 
 ##  Functions
 Hash table has the following functions
 
  - ### Private Functions
-	For functionality purpose (ahmad make this line better)
+	Operations that the table's functionality is based upon.
 	 - #### Hash Function:
 		 Hash function gets key, value, and function as arguments and returns an index using the key. The function argument can be either search or insert and performs operation based on the required function. The hash function is implemented using division method and uses double hashing for collision handling.
 	- #### Rehash:
@@ -19,17 +20,29 @@ Hash table has the following functions
 	- #### Search:
 		It takes a key as an argument and returns the data stored against it.
 	- #### Delete:
-		It takes a key as an argument and removes the key and data against it from the table. It returns they key and data deleted in the form of a tuple.
+		It takes a key as an argument and removes the key and data against it from the table. The function returns they key and data deleted in the form of a tuple.
 	- #### PrintTable:
 		This function prints all the keys and data in the table
 	- #### PrintArray:
 		It prints the array where used by the hash table which contains all the elements. This helps to inspect the indexes the data is stored and also to check for rehashing by inspecting the size of the array.
 	
 ##  How To Use:
- - Create an object of the hash table class and give the initial size of the table as an argument. The hash table will later be resized automatically when needed.
- - To insert data into the table call the Insert function through the object giving a key as the first argument and data as the second argument.
- - To search for the data stored against a key, call the Delete function through the object, giving the key as the argument.
- - To delete an element , call the Delete function through the object, giving the key as the argument.
- - Call the PrintTable function to print all the elements stored in the table.
- - Call the PrintArray function to print the array used by the hash table where all the elements are stored. There is **None** at indexes where no element is stored.
+ - Create an object of the **HashTable** class and give the initial size of the table as an argument. The hash table will later be resized automatically when needed.
+ - To insert data into the table call the **Insert** function through the object giving a key as the first argument and data as the second argument.
+ - To search for data stored against a key, call the **Search** function through the object, giving the key as the argument. If the key is not found it returns *False*
+ - To delete an element , call the **Delete** function through the object, giving the key as the argument. If the key is not found it returns *False*
+ - Call the **PrintTable** function to print all the elements stored in the table.
+ - Call the **PrintArray** function to print the array used by the hash table where all the elements are stored. There is *None* at indexes where no element is stored.
 
+##  Features:
+
+ - The keys can be numeric and even non numeric such as strings and symbols.
+ - When the keys are numeric and smaller than the size of the table, **open addressing** is implemented automatically where the data is stored at the index of the same value as the key.
+ - The table is resized and rehashed automatically when needed, it maintains efficiency when more data is being stored and also maintains space when more data has been deleted.
+
+## Team Members:
+ 
+
+ - Waleed Muhammad Sohail (18B-123-SE-A) (Team Lead)
+ - Ahmad Zaman Qureshi (18B-025-SE-A)
+ - Shazaib Awaan (18B-134-SE-A)
